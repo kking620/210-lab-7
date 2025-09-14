@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void reverseArray(string* sArray, int size);
-void displayArray(string* sArray, int size);
+string* reverseArray(string* arr, int size);
+void displayArray(string* arr, int size);
 
 const int SIZE = 5;
 
@@ -26,32 +26,34 @@ int main()
 
     cout << "Reversed Array: ";
     reverseArray(oArray, SIZE);
+    displayArray(oArray, SIZE);
     cout << endl << endl;
 
     delete [] oArray;
     return 0;
 }
 
-void reverseArray(string* sArray, int size)
+string* reverseArray(string* arr, int size)
 {
     string tempArray[SIZE];
 
-    for (int i = 0, j = 5; i < size, j > 0; i++, j--) 
+    for (int i = 0, j = 4; i < size, j >= 0; i++, j--) 
     {
-       tempArray[j] = sArray[i];
+       tempArray[j] = arr[i];
     }
 
     for (int i = 0; i < size; i++) 
     {
-        sArray[i] = tempArray[i];
+        arr[i] = tempArray[i];
     }
 
+    return arr;
 }
 
-void displayArray(string* sArray, int size)
+void displayArray(string* arr, int size)
 {
     for (int i = 0; i < size; i++) 
     {
-        cout << sArray[i] << "  ";
+        cout << arr[i] << "  ";
     }
 }
