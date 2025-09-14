@@ -1,3 +1,5 @@
+//COMSC-210 | Lab 7 | Kristofer King
+//IDE Used: VSC#include <iostream>
 #include <iostream>
 
 using namespace std;
