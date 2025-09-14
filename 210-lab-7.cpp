@@ -16,22 +16,36 @@ int main()
     
     for (int i = 0; i < SIZE; i++)
     {
-        cout << "> Element #" << i << ": ";
+        cout << "> Name #" << i << ": ";
         cin >> oArray[i];
     }
 
-    cout << "Original array: ";
+    cout << "Original Array: ";
     displayArray(oArray, SIZE);
-    cout << endl;
+    cout << endl << endl;
 
+    cout << "Reversed Array: ";
     reverseArray(oArray, SIZE);
+    cout << endl << endl;
 
-
+    delete [] oArray;
+    return 0;
 }
 
 void reverseArray(string* sArray, int size)
 {
-    
+    string tempArray[SIZE];
+
+    for (int i = 0, j = 5; i < size, j > 0; i++, j--) 
+    {
+       tempArray[j] = sArray[i];
+    }
+
+    for (int i = 0; i < size; i++) 
+    {
+        sArray[i] = tempArray[i];
+    }
+
 }
 
 void displayArray(string* sArray, int size)
